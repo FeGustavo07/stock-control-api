@@ -72,5 +72,11 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.tabSize": 3,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation":false
+}
 }
