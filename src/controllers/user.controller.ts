@@ -1,7 +1,7 @@
 import { Controller, Delete, Get, Post, Put } from "@nestjs/common";
 
-@Controller('/product')
-export class ProductController {
+@Controller('/user')
+export class UserController {
 
     @Post()
     public create() {
