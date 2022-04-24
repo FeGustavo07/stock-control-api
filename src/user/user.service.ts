@@ -1,5 +1,5 @@
-import { UserDTO } from './../dto/user.dto';
-import { UserModel } from './../models/user.model';
+import { UserDTO } from './user.dto';
+import { UserModel } from './user.model';
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from 'typeorm';

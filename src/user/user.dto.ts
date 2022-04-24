@@ -1,9 +1,8 @@
 import { IsString, MaxLength, MinLength } from 'class-validator';
-import { Positions } from 'src/enums/positions.enum';
 export class UserDTO {
 
     @IsString()
-    position: Positions;
+    position: string;
 
     @IsString()
     @MaxLength(120)

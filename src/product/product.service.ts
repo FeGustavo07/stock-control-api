@@ -1,5 +1,5 @@
-import { ProductDTO } from './../dto/product.dto';
-import { ProductModel } from './../models/product.model';
+import { ProductDTO } from '../product/product.dto';
+import { ProductModel } from '../product/product.model';
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from 'typeorm';
