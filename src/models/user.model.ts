@@ -1,3 +1,4 @@
+import { Positions } from "src/enums/positions.enum";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
@@ -7,7 +8,7 @@ export class UserModel {
     id: number;
 
     @Column()
-    position: string;
+    position: Positions;
 
     @Column({ length: 120 })
     name: string;
