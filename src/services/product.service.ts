@@ -1,5 +1,6 @@
+import { ProductDTO } from './../dto/product.dto';
 import { ProductModel } from './../models/product.model';
-import { Injectable } from "@nestjs/common";
+import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from 'typeorm';
 
@@ -8,7 +9,7 @@ export class ProductService {
 
     constructor(@InjectRepository(ProductModel) private productRepository: Repository<ProductModel>) {}
 
-    async create(product: ProductModel): Promise<ProductModel> {
+    async create(product: ProductDTO): Promise<ProductModel> {
         return await this.productRepository.save(product)
     }
 
@@ -17,10 +18,16 @@ export class ProductService {
     }
 
     async getById(id: number): Promise<ProductModel> {
-        return await this.productRepository.findOne(id)
+        const product = await this.productRepository.findOne(id)
+        
+        if(!product) {
+            throw new NotFoundException(`Id ${id} doesn't exists`)
+        }
+
+        return product
     }
 
-    async update(id: number, product: ProductModel) {
+    async update(id: number, product: ProductDTO) {
         return await this.productRepository.update(id, product)
     }
 

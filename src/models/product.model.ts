@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class ProductModel {
@@ -9,12 +9,13 @@ export class ProductModel {
     @Column({ length: 200 })
     name: string;
 
-    @Column('double')
+    @Column({ type: 'double'})
     price: number;
 
-    @Column()
+    @Column({ type: 'timestamptz' })
+    @CreateDateColumn()
     registrationDate: Date;
 
-    @Column('int')
+    @Column({ type: 'int' })
     amount: number;
 }
