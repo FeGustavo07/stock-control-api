@@ -21,6 +21,10 @@ export class UserService {
         return await this.userRepository.findOne(id)
     }
 
+    async getByEmail(email: string) {
+        return await this.userRepository.findOne({ email })
+    }
+
     async update(id: number, user: UserDTO): Promise<UserModel> {
         await this.userRepository.update(id, user)
         return this.userRepository.findOne(id)
