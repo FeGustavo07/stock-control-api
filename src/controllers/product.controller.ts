@@ -19,7 +19,7 @@ export class ProductController {
 
     @Get(':id')
     public getById(@Param('id') id: number) {
-        return this.getById(id)
+        return this.service.getById(id)
     }
 
     @Put(':id')
