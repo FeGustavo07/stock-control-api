@@ -12,7 +12,7 @@ export class UserModel {
     @Column({ length: 120 })
     name: string;
 
-    @Column({ nullable: false })
+    @Column({ nullable: true, unique: true })
     email: string;
 
     @Column({ length: 80 })

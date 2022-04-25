@@ -14,6 +14,6 @@ export class UserDTO {
 
     @IsString()
     @MinLength(6)
-    @MaxLength(80)
+    @MaxLength(30)
     password: string
 }
