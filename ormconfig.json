@@ -1,6 +1,19 @@
 {
-    "database": "./db.sql",
-    "type": "sqlite",
+    "type": "mysql",
+    "host": "us-cdbr-east-05.cleardb.net",
+    "port": 3306,
+    "username": "ba28dba7934516",
+    "password": "a12b4d30",
+    "database": "heroku_2b9205049b0aae4",
     "synchronize": true,
-    "entities": ["dist/**/*.model.js"]
-}
+    "logging": false,
+    "migrationsTableName": "migrations",
+    "entities": ["dist/**/*.model.js"],
+    "migrations": ["src/migration/**/*.ts"],
+    "subscribers": ["src/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+    }
+  }

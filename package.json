@@ -29,6 +29,7 @@
     "@nestjs/typeorm": "^8.0.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
+    "mysql": "^2.18.1",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
@@ -87,5 +88,8 @@
     "editor.tabSize": 3,
     "editor.insertSpaces": true,
     "editor.detectIndentation": false
+  },
+  "engines": {
+    "node": "16.13.0"
   }
 }
