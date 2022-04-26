@@ -17,4 +17,5 @@ export class UserModel {
 
     @Column({ length: 80 })
     password: string;
+
 }
