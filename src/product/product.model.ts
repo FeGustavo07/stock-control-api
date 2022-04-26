@@ -18,4 +18,7 @@ export class ProductModel {
 
     @Column({ type: 'int' })
     amount: number;
+
+    @Column({nullable: true})
+    userEmail: string;
 }
